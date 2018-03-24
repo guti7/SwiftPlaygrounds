@@ -1,4 +1,4 @@
-# Swift Playgrounds Application Developement
+# Swift Playgrounds Development
 
-Swift Playgrounds application development
+Swift Playgrounds application development  
 [lynda.com](http://lynda.com)
