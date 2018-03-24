@@ -8,7 +8,7 @@ import PlaygroundSupport
 class MenuBoard : UIViewController {
     
     var textView = UITextView()
-    var menuText = "Company\n"
+    var menuText = "Company Socks\n"
     
     func addViews() {
         textView = UITextView(frame: view.frame)
@@ -21,6 +21,11 @@ class MenuBoard : UIViewController {
         view.addSubview(textView)
     }
     
+    func print(_ newText: String) {
+        menuText += newText + "\n"
+        textView.text = menuText
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -29,5 +34,19 @@ class MenuBoard : UIViewController {
 }
 
 let menuBoard = MenuBoard()
+menuBoard.print("Red Socks Special")
+menuBoard.print("Blue Socks Special")
+
+let list = ["Green", "Yellow", "Pink", "Purple", "Black"]
+let sizes = ["M", "L", "XL", "S", "XS"]
+for index in 0..<list.count {
+    menuBoard.print("\(list[index])\t\t\t\(sizes[index])")
+}
 
 PlaygroundPage.current.liveView = menuBoard
+
+
+
+
+
+
